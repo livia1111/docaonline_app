@@ -1,0 +1,21 @@
+<%= form_for(@exemplar) do |f| %>
+  <% if @exemplar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exemplar.errors.count, "error") %> prohibited this exemplar from being saved:</h2>
+
+      <ul>
+      <% @exemplar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

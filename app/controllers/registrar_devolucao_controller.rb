@@ -1,0 +1,2 @@
+class RegistrarDevolucaoController < ApplicationController
+end

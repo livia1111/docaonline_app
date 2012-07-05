@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @produto.id %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @produto.titulo %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @produto.descricao %>
+</p>
+
+<p>
+  <b>Ano:</b>
+  <%= @produto.ano %>
+</p>
+
+<p>
+  <b>Imagem:</b>
+  <%= @produto.imagem %>
+</p>
+
+<p>
+  <b>Custo de locacao:</b>
+  <%= @produto.custo_de_locacao %>
+</p>
+
+<p>
+  <b>Tempo de utilizacao:</b>
+  <%= @produto.tempo_de_utilizacao %>
+</p>
+
+<p>
+  <b>Quantidade de itens:</b>
+  <%= @produto.quantidade_de_itens %>
+</p>
+
+<p>
+  <b>Qualidade:</b>
+  <%= @produto.qualidade %>
+</p>
+
+
+<%= link_to 'Edit', edit_produto_path(@produto) %> |
+<%= link_to 'Back', produtos_path %>

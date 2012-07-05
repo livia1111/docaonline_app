@@ -1,0 +1,59 @@
+<%= form_for(@produto) do |f| %>
+  <% if @produto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+
+      <ul>
+      <% @produto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br />
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :imagem %><br />
+    <%= f.text_field :imagem %>
+  </div>
+  <div class="field">
+    <%= f.label :custo_de_locacao %><br />
+    <%= f.text_field :custo_de_locacao %>
+  </div>
+  <div class="field">
+    <%= f.label :tempo_de_utilizacao %><br />
+    <%= f.number_field :tempo_de_utilizacao %>
+  </div>
+  <div class="field">
+    <%= f.label :quantidade_de_itens %><br />
+    <%= f.number_field :quantidade_de_itens %>
+  </div>
+  <div class="field">
+    <%= f.label :qualidade %><br />
+    <%= f.text_field :qualidade %>
+  </div>
+  <div class="field">
+    <%= 'Categoria' %><br />
+    <%= select_tag 'Categoria', options_from_collection_for_select(Categorium.all, 'id', 'nome')	 %>
+
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

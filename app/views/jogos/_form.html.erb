@@ -1,0 +1,29 @@
+<%= form_for(@jogo) do |f| %>
+  <% if @jogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jogo.errors.count, "error") %> prohibited this jogo from being saved:</h2>
+
+      <ul>
+      <% @jogo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo_de_midia %><br />
+    <%= f.text_field :tipo_de_midia %>
+  </div>
+  <div class="field">
+    <%= f.label :requisitos_computacionais %><br />
+    <%= f.text_area :requisitos_computacionais %>
+  </div>
+  <div class="field">
+    <%= f.label :genero %><br />
+    <%= f.text_field :genero %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

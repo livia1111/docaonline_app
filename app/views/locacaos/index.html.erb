@@ -1,0 +1,25 @@
+<h1>Listing locacaos</h1>
+
+<table>
+  <tr>
+    <th>Data de retirada</th>
+    <th>Data de entrega</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @locacaos.each do |locacao| %>
+  <tr>
+    <td><%= locacao.data_de_retirada %></td>
+    <td><%= locacao.data_de_entrega %></td>
+    <td><%= link_to 'Show', locacao %></td>
+    <td><%= link_to 'Edit', edit_locacao_path(locacao) %></td>
+    <td><%= link_to 'Destroy', locacao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Locacao', new_locacao_path %>

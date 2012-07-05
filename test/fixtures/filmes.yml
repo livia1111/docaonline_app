@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipo_de_midia: MyString
+  atores_principais: MyString
+  diretor: MyString
+  distribuidora: MyString
+  genero: MyString
+  tempo_de_duracao: 1
+
+two:
+  tipo_de_midia: MyString
+  atores_principais: MyString
+  diretor: MyString
+  distribuidora: MyString
+  genero: MyString
+  tempo_de_duracao: 1

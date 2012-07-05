@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data de retirada:</b>
+  <%= @locacao.data_de_retirada %>
+</p>
+
+<p>
+  <b>Data de entrega:</b>
+  <%= @locacao.data_de_entrega %>
+</p>
+
+
+<%= link_to 'Edit', edit_locacao_path(@locacao) %> |
+<%= link_to 'Back', locacaos_path %>

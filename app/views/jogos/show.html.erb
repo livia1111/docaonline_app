@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo de midia:</b>
+  <%= @jogo.tipo_de_midia %>
+</p>
+
+<p>
+  <b>Requisitos computacionais:</b>
+  <%= @jogo.requisitos_computacionais %>
+</p>
+
+<p>
+  <b>Genero:</b>
+  <%= @jogo.genero %>
+</p>
+
+
+<%= link_to 'Edit', edit_jogo_path(@jogo) %> |
+<%= link_to 'Back', jogos_path %>

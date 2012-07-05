@@ -1,0 +1,2 @@
+module RegistrarLocacaoHelper
+end

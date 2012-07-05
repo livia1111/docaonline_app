@@ -1,0 +1,23 @@
+<h1>Listing exemplars</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exemplars.each do |exemplar| %>
+  <tr>
+    <td><%= exemplar.id %></td>
+    <td><%= link_to 'Show', exemplar %></td>
+    <td><%= link_to 'Edit', edit_exemplar_path(exemplar) %></td>
+    <td><%= link_to 'Destroy', exemplar, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exemplar', new_exemplar_path %>

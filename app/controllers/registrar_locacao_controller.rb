@@ -1,0 +1,2 @@
+class RegistrarLocacaoController < ApplicationController
+end
